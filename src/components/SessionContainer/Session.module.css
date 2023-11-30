@@ -1,0 +1,11 @@
+.session {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 5px solid gray;
+}
+#timer-label {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
