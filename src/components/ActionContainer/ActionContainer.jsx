@@ -1,25 +1,22 @@
-import { useState } from 'react';
 import { ResetIcon, StartIcon, StopIcon } from '../assets/icons/icons';
 import classes from './ActionContainer.module.css';
 
 const ActionContainer = (props) => {
-  const { handleStart, handleStop, handleReset } = props;
-  const [isStartBtn, setIsStartBtn] = useState(true);
+  const { handleStart, handleStop, handleReset, isRunning } = props;
   const handleStartStop = () => {
-    if (isStartBtn) {
+    if (!isRunning) {
       handleStart()
     } else {
       handleStop()
     }
-    setIsStartBtn(prev => !prev)
   };
   return (
-    <div className="container">
+    <div className={classes.container}>
       <button
         className={classes.reset}
-        id="start-stop"
+        id="start_stop"
         onClick={handleStartStop}
-      >{isStartBtn ? <StartIcon/> : <StopIcon/>}</button>
+      >{!isRunning ? <StartIcon/> : <StopIcon/>}</button>
       <button
         className={classes.reset}
         id="reset"

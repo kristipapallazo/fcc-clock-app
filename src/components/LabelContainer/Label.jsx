@@ -4,10 +4,13 @@ const Label = (props) => {
   const handleInputChange = (type) => {
     //type determines either is increment or decrement
     setInput((input) => {
+      let newInput = input;
       if (type) {
-        return ++input;
+        newInput += 1;
+      } else {
+        newInput -= 1;
       }
-      return --input;
+      return (newInput > 60) | (newInput <= 0) ? input : newInput;
     });
   };
   const labelId = `${id}-label`;
@@ -16,13 +19,23 @@ const Label = (props) => {
   const lengthId = `${id}-length`;
   return (
     <div className={classes.container}>
-      <div id={labelId}>{label} length</div>
-      <div className="btn-label">
-        <button onClick={() => handleInputChange()} id={decrementId}>
+      <div id={labelId} className={classes.label}>
+        {label} length
+      </div>
+      <div className={classes.btnContainer}>
+        <button
+          onClick={() => handleInputChange()}
+          id={decrementId}
+          className={classes.btn}
+        >
           -
         </button>
         <span id={lengthId}>{input}</span>
-        <button onClick={() => handleInputChange(true)} id={incrementId}>
+        <button
+          onClick={() => handleInputChange(true)}
+          id={incrementId}
+          className={classes.btn}
+        >
           +
         </button>
       </div>

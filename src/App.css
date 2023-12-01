@@ -3,28 +3,38 @@
   width: inherit;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  /* background-color: var(--russian-green); */
+  background-color: var(--russian-green);
 }
 .container {
   display: flex;
   flex-direction: column;
+  row-gap: 20px;
   background-color: lightgray;
   border-radius: var(--border-rad);
   height: 50%;
   width: 50%;
   padding: 15px;
+  box-shadow: 4px 4px 5px 2px gray;
 }
 .title {
-  margin: 0 auto 10px;
+  margin: 0 auto;
+  flex-shrink: 1;
 }
 .labels {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 1;
 }
 button {
   padding: 5px 10px;
   border: 2px solid black;
   background-color: var(--russian-green);
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  /* border */
 }
