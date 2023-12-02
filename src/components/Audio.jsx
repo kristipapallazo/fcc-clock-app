@@ -1,10 +1,11 @@
 const Audio = () => {
   return (
-    <div>
-      <audio id="beep" controls>
-        <source src="./assets/beep.wav" type="audio/wav"></source>
-      </audio>
-    </div>
+    <audio style={{ background: 'red' }} id="beep" preload="auto">
+      <source
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+        type="audio/wav"
+      ></source>
+    </audio>
   );
 };
 

@@ -4,9 +4,37 @@
   border-radius: 20px;
   border: 5px solid gray;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
 }
+.session.breakTime {
+  border-color: yellow !important;
+}
+.session.lastMin {
+  border-color: red !important;
+}
+
 .timerLabel {
   font-size: 1.5rem;
-  font-weight: bold;
   margin: 10px 0;
+  flex-shrink: 1;
+}
+.timeLeft {
+  font-size: 6rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeLeft.breakTime {
+  color: yellow !important;
+}
+.timeLeft.lastMin {
+  color: red !important;
+}
+@media only screen and (max-width: 601px) {
+  .timeLeft {
+    font-size: 5rem;
+  }
 }
