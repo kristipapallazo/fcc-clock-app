@@ -6,7 +6,7 @@ import Audio from '../Audio';
 import classes from './MainContainer.module.css';
 
 const DEFAULT_BREAK = 5;
-const DEFAULT_SESSION = 0.25;
+const DEFAULT_SESSION = 25;
 
 const MainContainer = () => {
   const [breakInput, setBreakInput] = useState(DEFAULT_BREAK);
