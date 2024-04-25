@@ -34,7 +34,10 @@
   color: red !important;
 }
 @media only screen and (max-width: 601px) {
+  .timerLabel {
+    font-size: 1.3rem;
+  }
   .timeLeft {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }

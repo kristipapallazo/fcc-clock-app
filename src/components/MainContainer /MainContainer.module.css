@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: lightgray;
+  border-radius: var(--border-rad);
+  width: 50%;
+  padding: 15px;
+  box-shadow: 4px 4px 5px 2px gray;
+  overflow: auto;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 70%;
+    /* height: 70%; */
+  }
+}

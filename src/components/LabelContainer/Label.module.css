@@ -5,4 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 5px;
+}
+@media only screen and (max-width: 601px) {
+  .btnContainer {
+    column-gap: 2px;
+  }
 }

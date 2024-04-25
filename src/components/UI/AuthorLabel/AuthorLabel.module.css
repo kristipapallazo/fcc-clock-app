@@ -1,0 +1,6 @@
+.name {
+  color: var(--sec-color);
+  font-weight: bold;
+  font-size: 18px;
+  font-family: fantasy;
+}

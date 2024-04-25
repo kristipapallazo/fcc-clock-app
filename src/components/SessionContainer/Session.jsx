@@ -16,26 +16,18 @@ const Session = (props) => {
   const isLastMin = timeLeft < 60;
 
   console.log('isLastMin', isLastMin);
+  const dynamicClass = isLastMin
+    ? classes.lastMin
+    : isBreakTime
+    ? classes.breakTime
+    : '';
+
   return (
-    <div
-      className={`${classes.session} ${
-        isLastMin ? classes.lastMin : isBreakTime ? classes.breakTime : ''
-      }`}
-    >
-      <div
-        id="timer-label"
-        className={`${classes.timerLabel} ${
-          isLastMin ? classes.lastMin : isBreakTime ? classes.breakTime : ''
-        }`}
-      >
+    <div className={`${classes.session} ${dynamicClass}`}>
+      <div id="timer-label" className={`${classes.timerLabel} ${dynamicClass}`}>
         {label}
       </div>
-      <div
-        id="time-left"
-        className={`${classes.timeLeft} ${
-          isLastMin ? classes.lastMin : isBreakTime ? classes.breakTime : ''
-        }`}
-      >
+      <div id="time-left" className={`${classes.timeLeft} ${dynamicClass}`}>
         {formatedTime()}
       </div>
     </div>
