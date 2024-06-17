@@ -2,6 +2,7 @@ import AuthorLabel from './components/UI/AuthorLabel/AuthorLabel';
 import MainContainer from './components/MainContainer /MainContainer';
 import AppTitle from './components/UI/AppTitle/AppTitle';
 import './App.css';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <AppTitle label="25 + 5 Clock" />
       <MainContainer />
       <AuthorLabel />
+      <SpeedInsights />
     </div>
   );
 }
